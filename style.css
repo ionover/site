@@ -1,11 +1,13 @@
 /* Общие стили */
-body {
+body, html {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
     color: #333;
     background-color: #f9f9f9;
+    overflow-x: hidden; /* Убираем горизонтальную прокрутку */
+    box-sizing: border-box;
 }
 
 header {
@@ -28,6 +30,7 @@ h1, h2 {
 ul {
     list-style-type: none;
     padding: 0;
+    margin: 0;
 }
 
 li {
@@ -39,11 +42,12 @@ li {
     margin: 20px auto;
     max-width: 600px;
     position: relative;
+    overflow: hidden; /* Обрезаем все, что выходит за пределы карусели */
 }
 
 .carousel {
     position: relative;
-    max-width: 600px;
+    max-width: 100%; /* Гарантируем, что слайдер занимает всю ширину контейнера */
     margin: auto;
 }
 
@@ -57,9 +61,9 @@ li {
     cursor: pointer;
     position: absolute;
     top: 50%;
-    width: 50px;
-    height: 50px;
-    margin-top: -25px;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
     border: none;
@@ -67,17 +71,17 @@ li {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 24px;
+    font-size: 18px;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.next {
-    right: -25px;
+    z-index: 10;
 }
 
 .prev {
-    left: -25px;
+    left: 10px; /* Вместо отрицательного значения */
+}
+
+.next {
+    right: 10px; /* Вместо отрицательного значения */
 }
 
 .prev:hover, .next:hover {
@@ -94,8 +98,8 @@ li {
 
 .dot {
     display: inline-block;
-    width: 15px;
-    height: 15px;
+    width: 10px;
+    height: 10px;
     margin: 0 5px;
     background-color: rgba(0, 0, 0, 0.5);
     border-radius: 50%;
@@ -111,30 +115,29 @@ li {
     background-color: white;
 }
 
-/* Убедитесь, что футер не фиксирован */
+/* Футер */
 footer {
-    position: relative; /* Вместо fixed */
-    padding: 10px; /* Добавляем отступы */
+    position: relative; /* Убедитесь, что футер не фиксирован */
+    padding: 10px;
     text-align: center;
+    background-color: #f9f9f9;
 }
 
 /* Масштабируем иконку Telegram для мобильных устройств */
 #telegram-link img {
-    max-width: 50px; /* Ограничиваем ширину */
+    max-width: 40px; /* Ограничиваем ширину */
     height: auto; /* Сохраняем пропорции */
-}
-
-/* Отступ внизу страницы для футера */
-body {
-    margin: 0;
-    padding-bottom: 60px; /* Создаем пространство под футер */
-    box-sizing: border-box;
 }
 
 /* Адаптивный дизайн для маленьких экранов */
 @media (max-width: 768px) {
+    .prev, .next {
+        width: 30px;
+        height: 30px;
+        font-size: 14px;
+    }
     #telegram-link img {
-        max-width: 40px; /* Уменьшаем размер иконки на мобильных */
+        max-width: 30px; /* Уменьшаем размер иконки на мобильных */
     }
     footer {
         padding: 20px; /* Добавляем больше пространства */
