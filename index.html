@@ -3,47 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Taxi Service</title>
+    <title>Крым Такси</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Крым такси</h1>
-    </header>
-    <main>
-        <section id="welcome">
-            <h2>Добро пожаловать на сайт Крым такси</h2>
-            <p>Мы предоставляем надежные и эффективные услуги такси, чтобы доставить вас туда, куда вам нужно.</p>
-        </section>
-        <section id="services">
-            <h2>Предлагаемые услуги</h2>
-            <ul>
-                <li>Круглосуточное такси</li>
-                <li>Трансферы в аэропорт</li>
-                <li>Экскурсии по городу</li>
-                <li>Корпоративные счета</li>
-            </ul>
-        </section>
-        <section id="contact">
-            <h2>Свяжитесь с нами</h2>
-            <p>Для бронирования и запросов, пожалуйста, свяжитесь с нами:</p>
-            <ul>
-                <li>Телефон: 123-456-7890</li>
-                <li>Электронная почта: contact@taxiservice.com</li>
-            </ul>
-        </section>
-    </main>
-    <footer>
-        <p>Спасибо, что выбрали наш сервис!</p>
-    </footer>
-    <div class="carousel">
-        <img src="front.jpeg" alt="Toyota Avensis 1" class="carousel-image">
-        <img src="side.jpeg" alt="Toyota Avensis 2" class="carousel-image" style="display:none;">
-        <img src="back.jpeg" alt="Toyota Avensis 3" class="carousel-image" style="display:none;">
-        <button class="prev" onclick="changeImage(-1)">&#10094;</button>
-        <button class="next" onclick="changeImage(1)">&#10095;</button>
-    </div>
+<header>
+    <h1>Крым Такси</h1>
+</header>
+<main>
+    <section id="welcome">
+        <h2>Добро пожаловать на сайт Крым Такси</h2>
+        <p>Никаких посредников: вы общаетесь напрямую с водителем и заранее знаете, какой автомобиль приедет.</p>
+        <p>Стаж вождения более 40 лет. Доставлю в любую точку Крыма без лишних проблем.</p>
+    </section>
 
-    <script src="script.js"></script>
+    <section id="services">
+        <h2>Предлагаемые услуги</h2>
+        <ul>
+            <li>Круглосуточное такси</li>
+            <li>Встреча в аэропорту и на вокзале с комфортом</li>
+            <li>Персональный трансфер в любой город</li>
+        </ul>
+    </section>
+
+
+    <section class="carousel-container">
+        <!-- Слайдер с изображениями -->
+        <div class="carousel">
+            <img src="front.jpeg" alt="Toyota Avensis 1" class="carousel-image">
+            <img src="side.jpeg" alt="Toyota Avensis 2" class="carousel-image" style="display: none;">
+            <img src="back.jpeg" alt="Toyota Avensis 3" class="carousel-image" style="display: none;">
+            <button class="prev" onclick="changeImage(-1)">&#10094;</button>
+            <button class="next" onclick="changeImage(1)">&#10095;</button>
+        </div>
+
+        <!-- Индикаторы для слайдера -->
+        <div class="carousel-indicators">
+            <span class="dot" onclick="setImage(0)"></span>
+            <span class="dot" onclick="setImage(1)"></span>
+            <span class="dot" onclick="setImage(2)"></span>
+        </div>
+    </section>
+
+
+
+    <section id="contact">
+        <h2>Мои контакты</h2>
+        <ul>
+            <li>Телефон: +7 (978) 07-90-888</li>
+            <li>Электронная почта: v_crimea@mail.ru</li>
+        </ul>
+    </section>
+</main>
+<footer>
+    <p>Спасибо, что выбрали наш сервис!</p>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>

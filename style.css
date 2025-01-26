@@ -1,9 +1,11 @@
+/* Общие стили */
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
     color: #333;
+    background-color: #f9f9f9;
 }
 
 header {
@@ -11,18 +13,34 @@ header {
     padding: 10px 0;
     text-align: center;
     color: black;
+    font-size: 24px;
 }
 
 main {
     padding: 20px;
-    background-color: black;
-    color: white;
     text-align: center;
 }
 
 h1, h2 {
     color: #444;
 }
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin: 5px 0;
+}
+
+/* Стили для карусели */
+.carousel-container {
+    margin: 20px auto;
+    max-width: 600px;
+    position: relative;
+}
+
 .carousel {
     position: relative;
     max-width: 600px;
@@ -32,9 +50,9 @@ h1, h2 {
 .carousel-image {
     width: 100%;
     display: block;
+    border-radius: 10px;
 }
 
-/* Новые стили для стрелочек */
 .prev, .next {
     cursor: pointer;
     position: absolute;
@@ -42,8 +60,8 @@ h1, h2 {
     width: 50px;
     height: 50px;
     margin-top: -25px;
-    color: white;
     background-color: rgba(0, 0, 0, 0.5);
+    color: white;
     border: none;
     border-radius: 50%;
     display: flex;
@@ -68,16 +86,32 @@ h1, h2 {
     transform: scale(1.1);
 }
 
-
-ul {
-    list-style-type: none;
-    padding: 0;
+/* Индикаторы */
+.carousel-indicators {
+    text-align: center;
+    margin-top: 10px;
 }
 
-li {
-    margin: 5px 0;
+.dot {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin: 0 5px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
+.dot.active {
+    background-color: yellow;
+}
+
+.dot:hover {
+    background-color: white;
+}
+
+/* Подвал */
 footer {
     background: #f4f4f4;
     text-align: center;
