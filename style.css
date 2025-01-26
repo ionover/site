@@ -120,3 +120,20 @@ footer {
     width: 100%;
     bottom: 0;
 }
+
+#telegram-link {
+    display: inline-block;
+    margin-top: 10px;
+    text-align: center;
+}
+
+#telegram-link img {
+    width: 40px; /* Размер иконки */
+    height: 40px;
+    cursor: pointer;
+    transition: transform 0.3s ease; /* Эффект при наведении */
+}
+
+#telegram-link img:hover {
+    transform: scale(1.2); /* Увеличение при наведении */
+}
