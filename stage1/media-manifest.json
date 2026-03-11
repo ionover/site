@@ -1,0 +1,77 @@
+{
+  "status": {
+    "savedHtmlReferencesLocalFolder": false,
+    "note": "HTML содержит ссылки на каталог сохранения браузера `TAXI _ Лучшее таки по Крыму_files`, но физически такого каталога в проекте нет."
+  },
+  "availableInProjectRoot": [
+    {
+      "file": "i.jpeg",
+      "kind": "image",
+      "dimensions": "740x415",
+      "usage": "not referenced in saved HTML"
+    }
+  ],
+  "referencedImages": [
+    {
+      "file": "ChatGPT-Image-Mar-26-2025-08_5.png",
+      "type": "logo",
+      "source": "https://krimea-taxi.ru/wp-content/uploads/2025/03/ChatGPT-Image-Mar-26-2025-08_5.png",
+      "referencedPath": "./TAXI _ Лучшее таки по Крыму_files/ChatGPT-Image-Mar-26-2025-08_5.png",
+      "presentLocally": false
+    },
+    {
+      "file": "side.jpeg",
+      "type": "hero-car",
+      "source": "https://krimea-taxi.ru/wp-content/uploads/2025/03/side.jpeg",
+      "referencedPath": "./TAXI _ Лучшее таки по Крыму_files/side.jpeg",
+      "presentLocally": false
+    },
+    {
+      "file": "front.jpeg",
+      "type": "gallery",
+      "source": "https://krimea-taxi.ru/wp-content/uploads/2025/03/front.jpeg",
+      "referencedPath": "./TAXI _ Лучшее таки по Крыму_files/front.jpeg",
+      "presentLocally": false
+    },
+    {
+      "file": "back.jpeg",
+      "type": "gallery",
+      "source": "https://krimea-taxi.ru/wp-content/uploads/2025/03/back.jpeg",
+      "referencedPath": "./TAXI _ Лучшее таки по Крыму_files/back.jpeg",
+      "presentLocally": false
+    },
+    {
+      "file": "20200728_153141-scaled.jpg",
+      "type": "gallery",
+      "source": "https://krimea-taxi.ru/wp-content/uploads/2025/03/20200728_153141-scaled.jpg",
+      "referencedPath": "./TAXI _ Лучшее таки по Крыму_files/20200728_153141-scaled.jpg",
+      "presentLocally": false
+    },
+    {
+      "file": "20200728_150946-scaled.jpg",
+      "type": "gallery",
+      "source": "https://krimea-taxi.ru/wp-content/uploads/2025/03/20200728_150946-scaled.jpg",
+      "referencedPath": "./TAXI _ Лучшее таки по Крыму_files/20200728_150946-scaled.jpg",
+      "presentLocally": false
+    },
+    {
+      "file": "20200728_151057-scaled.jpg",
+      "type": "gallery",
+      "source": "https://krimea-taxi.ru/wp-content/uploads/2025/03/20200728_151057-scaled.jpg",
+      "referencedPath": "./TAXI _ Лучшее таки по Крыму_files/20200728_151057-scaled.jpg",
+      "presentLocally": false
+    },
+    {
+      "file": "20200728_151133-scaled.jpg",
+      "type": "gallery",
+      "source": "https://krimea-taxi.ru/wp-content/uploads/2025/03/20200728_151133-scaled.jpg",
+      "referencedPath": "./TAXI _ Лучшее таки по Крыму_files/20200728_151133-scaled.jpg",
+      "presentLocally": false
+    }
+  ],
+  "faviconCandidates": [
+    "https://krimea-taxi.ru/wp-content/uploads/2025/03/cropped-ChatGPT-Image-Mar-26-2025-08_54_30-AM-32x32.png",
+    "https://krimea-taxi.ru/wp-content/uploads/2025/03/cropped-ChatGPT-Image-Mar-26-2025-08_54_30-AM-180x180.png",
+    "https://krimea-taxi.ru/wp-content/uploads/2025/03/cropped-ChatGPT-Image-Mar-26-2025-08_54_30-AM-192x192.png"
+  ]
+}
