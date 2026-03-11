@@ -18,7 +18,7 @@ export const siteMeta = {
   name: "Крым Такси",
   domain: "https://krimea-taxi.ru",
   ownerName: "Владимир",
-  placeholderImage: "/images/i.jpeg",
+  placeholderImage: `${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/images/i.jpeg`,
   tagline: "Частный трансфер и междугороднее такси по Крыму без посредников.",
 };
 
