@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { legalPages } from "@/data/legal";
 
 export const metadata: Metadata = {
-  title: "Пользовательское соглашение",
-  description: "Временная страница пользовательского соглашения для нового сайта.",
+  title: legalPages.agreement.title,
+  description: legalPages.agreement.description,
 };
 
 export default function AgreementPage() {
@@ -14,14 +15,13 @@ export default function AgreementPage() {
       </Link>
       <div className="mt-6 rounded-[32px] border border-white/70 bg-white/80 p-8 shadow-soft">
         <p className="text-sm font-semibold uppercase tracking-[0.24em] text-amber">
-          Заглушка
+          {legalPages.agreement.eyebrow}
         </p>
         <h1 className="mt-4 text-3xl font-semibold text-slate">
-          Пользовательское соглашение
+          {legalPages.agreement.title}
         </h1>
         <p className="mt-4 text-base leading-7 text-slate/80">
-          Страница создана заранее, чтобы структура проекта была полной. Финальный
-          юридический текст можно вставить без переделки маршрутов и layout.
+          {legalPages.agreement.body}
         </p>
       </div>
     </main>
