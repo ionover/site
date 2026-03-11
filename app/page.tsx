@@ -77,9 +77,11 @@ export default function HomePage() {
               Фото-времянка
             </p>
             <p className="mt-3 text-sm leading-6 text-slate/80">
-              Пока реальные фотографии не переданы, в проекте используется
-              `public/images/i.jpeg` как единый временный источник для всех визуальных
-              блоков.
+              Пока реальные фотографии не переданы, в проекте используется{" "}
+              <code className="rounded bg-slate/10 px-1.5 py-0.5 text-[0.95em] text-slate">
+                public/images/i.jpeg
+              </code>{" "}
+              как единый временный источник для всех визуальных блоков.
             </p>
           </div>
         </div>
