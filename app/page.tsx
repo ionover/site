@@ -2,6 +2,7 @@ import { Contacts } from "@/components/contacts";
 import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
 import { Hero } from "@/components/hero";
+import { HowToOrder } from "@/components/how-to-order";
 import { Pricing } from "@/components/pricing";
 import { Services } from "@/components/services";
 
@@ -13,6 +14,7 @@ export default function HomePage() {
       <main className="mt-6 flex-1 space-y-6">
         <Hero />
         <Services />
+        <HowToOrder />
         <Pricing />
         <Contacts />
       </main>
