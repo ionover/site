@@ -14,6 +14,12 @@ export type TripColumn = {
   items: InfoItem[];
 };
 
+export type CarSlide = {
+  id: string;
+  title: string;
+  description: string;
+};
+
 export const siteMeta = {
   name: "Крым Такси",
   domain: "https://krimea-taxi.ru",
@@ -82,7 +88,27 @@ export const carsSection = {
     "Слежу за чистотой, тишиной в салоне и техническим состоянием автомобиля.",
     "Пассажиру не нужно угадывать, что приедет: формат поездки можно обсудить заранее.",
   ],
+  comfortNote:
+    "В поездке важны тишина, аккуратная подача и предсказуемый комфорт. Машина всегда готовится к маршруту заранее.",
   imageAlt: "Временный плейсхолдер для фотографий автомобилей",
+  autoplayMs: 6000,
+  slides: [
+    {
+      id: "city-transfer",
+      title: "Трансфер по Крыму",
+      description: "Чистый салон, мягкий ход и спокойная поездка по заранее согласованному маршруту.",
+    },
+    {
+      id: "airport-pickup",
+      title: "Встреча из аэропорта",
+      description: "Комфортная подача ко времени прилета и помощь с багажом без лишней суеты.",
+    },
+    {
+      id: "intercity-ride",
+      title: "Межгород без спешки",
+      description: "Автомобиль обслуживается вовремя, чтобы дорога была ровной и предсказуемой.",
+    },
+  ] satisfies CarSlide[],
 };
 
 export const advantages: InfoItem[] = [
