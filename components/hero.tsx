@@ -22,13 +22,13 @@ export function Hero() {
 
         <div className="mt-8 flex flex-col gap-3">
           <a
-            className="rounded-full bg-amber px-5 py-3 text-center text-base font-semibold text-sand transition hover:bg-[#945327] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber/35"
+            className="flex h-20 items-center justify-center rounded-full bg-amber px-5 text-center text-[38px] font-semibold text-sand transition hover:bg-[#945327] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber/35"
             href={contacts.phoneHref}
           >
             {contacts.phoneDisplay}
           </a>
           <a
-            className="rounded-full border border-[#d6b28c]/45 bg-[#5c4230] px-5 py-3 text-center text-base font-semibold text-sand transition hover:bg-[#674a35] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/35"
+            className="flex h-[60px] items-center justify-center rounded-full border border-[#d6b28c]/45 bg-[#5c4230] px-5 text-center text-2xl font-semibold text-sand transition hover:bg-[#674a35] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/35"
             href={contacts.telegram}
             target="_blank"
             rel="noreferrer"
