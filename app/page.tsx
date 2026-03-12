@@ -1,4 +1,5 @@
 import { Contacts } from "@/components/contacts";
+import { Cars } from "@/components/cars";
 import { Faq } from "@/components/faq";
 import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
@@ -17,9 +18,10 @@ export default function HomePage() {
       <main className="mt-6 flex-1 space-y-6">
         <Hero />
         <Services />
-        <HowToOrder />
-        <TripOptions />
+        <Cars />
         <Pricing />
+        <TripOptions />
+        <HowToOrder />
         <Testimonials />
         <Faq />
         <Contacts />
