@@ -6,7 +6,7 @@ export function Contacts() {
   return (
     <section
       id="contacts"
-      className="rounded-[32px] border border-[#d8c6ad] bg-[#fff9ef] p-6 shadow-soft sm:p-8"
+      className="rounded-[24px] border border-[#c8af91] bg-[#f7e9d3] p-6 shadow-soft sm:p-8"
     >
       <p className="text-sm font-semibold uppercase tracking-[0.24em] text-amber">Контакты</p>
       <h2 className="mt-3 text-3xl font-semibold tracking-tight text-slate">Связь с водителем напрямую</h2>
@@ -16,14 +16,14 @@ export function Contacts() {
       </p>
       <div className="mt-6 grid gap-4 md:grid-cols-3">
         <a
-          className="rounded-2xl bg-slate p-5 text-sand shadow-soft transition hover:bg-slate/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate/30"
+          className="rounded-2xl bg-slate p-5 text-sand shadow-soft transition hover:bg-[#413126] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate/30"
           href={contacts.phoneHref}
         >
           <p className="text-sm text-sand/70">Телефон</p>
           <p className="mt-2 text-xl font-semibold">{contacts.phoneDisplay}</p>
         </a>
         <a
-          className="rounded-2xl bg-[#f7e8d3] p-5 text-slate shadow-soft ring-1 ring-[#d8c5ad] transition hover:ring-[#bea78c] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber/35"
+          className="rounded-2xl bg-[#f0ddc2] p-5 text-slate shadow-soft ring-1 ring-[#c7ae90] transition hover:ring-[#b79d7f] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber/35"
           href={contacts.telegram}
           target="_blank"
           rel="noreferrer"
@@ -32,7 +32,7 @@ export function Contacts() {
           <p className="mt-2 text-xl font-semibold">{telegramLabel}</p>
         </a>
         <a
-          className="rounded-2xl bg-[#f7e8d3] p-5 text-slate shadow-soft ring-1 ring-[#d8c5ad] transition hover:ring-[#bea78c] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber/35"
+          className="rounded-2xl bg-[#f0ddc2] p-5 text-slate shadow-soft ring-1 ring-[#c7ae90] transition hover:ring-[#b79d7f] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber/35"
           href={`mailto:${contacts.email}`}
         >
           <p className="text-sm text-slate/60">Email</p>

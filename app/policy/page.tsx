@@ -13,7 +13,7 @@ export default function PolicyPage() {
       <Link className="text-sm font-medium text-slate/60 hover:text-slate" href="/">
         На главную
       </Link>
-      <div className="mt-6 rounded-[32px] border border-white/70 bg-white/80 p-8 shadow-soft">
+      <div className="mt-6 rounded-[24px] border border-[#c8af91] bg-[#f7e9d3] p-8 shadow-soft">
         <p className="text-sm font-semibold uppercase tracking-[0.24em] text-amber">
           {legalPages.policy.eyebrow}
         </p>

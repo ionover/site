@@ -4,11 +4,16 @@
 
 :root {
   color-scheme: light;
-  --bg-top: #e8d5bc;
-  --bg-mid: #f6ead9;
-  --bg-bottom: #eadcc7;
-  --text-main: #2f2319;
-  --brand: #b86e2f;
+  --bg-top: #dbc3a4;
+  --bg-mid: #efdfc7;
+  --bg-bottom: #ddc8ad;
+  --text-main: #33261c;
+  --heading-main: #2b1f16;
+  --brand: #a65f2d;
+  --grain: rgba(74, 49, 28, 0.05);
+  --surface-main: #f7e9d3;
+  --surface-alt: #f2dfc3;
+  --line-main: #c8af91;
 }
 
 html {
@@ -16,23 +21,41 @@ html {
 }
 
 body {
+  position: relative;
   margin: 0;
   min-height: 100vh;
   background:
-    radial-gradient(circle at 14% 10%, rgba(184, 110, 47, 0.3), transparent 34%),
-    radial-gradient(circle at 88% 22%, rgba(116, 78, 44, 0.14), transparent 42%),
-    linear-gradient(180deg, var(--bg-top) 0%, var(--bg-mid) 52%, var(--bg-bottom) 100%);
+    radial-gradient(circle at 15% 8%, rgba(145, 93, 49, 0.26), transparent 30%),
+    radial-gradient(circle at 82% 18%, rgba(92, 61, 37, 0.16), transparent 38%),
+    linear-gradient(180deg, var(--bg-top) 0%, var(--bg-mid) 48%, var(--bg-bottom) 100%);
   color: var(--text-main);
-  font-family: "Trebuchet MS", "Segoe UI", sans-serif;
-  line-height: 1.5;
+  font-family: "Segoe UI", Tahoma, Verdana, sans-serif;
+  line-height: 1.55;
   text-rendering: optimizeLegibility;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background:
+    repeating-linear-gradient(
+      55deg,
+      transparent 0,
+      transparent 3px,
+      var(--grain) 3px,
+      var(--grain) 4px
+    );
+  opacity: 0.35;
 }
 
 h1,
 h2,
 h3 {
-  color: #2c2017;
-  font-family: Georgia, "Times New Roman", serif;
+  color: var(--heading-main);
+  font-family: "Palatino Linotype", "Book Antiqua", Georgia, serif;
+  letter-spacing: 0.01em;
 }
 
 a {
