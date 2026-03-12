@@ -23,11 +23,9 @@ export const siteMeta = {
 };
 
 export const navigation: NavItem[] = [
+  { id: "hero", label: "Главная" },
   { id: "services", label: "Услуги" },
-  { id: "auto", label: "Мои машины" },
-  { id: "trip", label: "Поездки" },
-  { id: "faq", label: "FAQ" },
-  { id: "cost", label: "Цены" },
+  { id: "pricing", label: "Цены" },
   { id: "contacts", label: "Контакты" },
 ];
 
