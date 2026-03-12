@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { contacts, siteMeta } from "@/data/site";
 
 export function Footer() {
@@ -10,12 +11,17 @@ export function Footer() {
             Водитель {contacts.driverName}. Частный трансфер по Крыму без посредников.
           </p>
         </div>
-        <a
-          href={contacts.phoneHref}
-          className="mt-2 font-semibold text-slate transition hover:text-amber sm:mt-0"
-        >
-          {contacts.phoneDisplay}
-        </a>
+        <div className="mt-2 flex flex-wrap items-center gap-4 sm:mt-0">
+          <Link className="text-slate/65 transition hover:text-slate" href="/policy">
+            Политика
+          </Link>
+          <Link className="text-slate/65 transition hover:text-slate" href="/agreement">
+            Соглашение
+          </Link>
+          <a href={contacts.phoneHref} className="font-semibold text-slate transition hover:text-amber">
+            {contacts.phoneDisplay}
+          </a>
+        </div>
       </div>
     </footer>
   );

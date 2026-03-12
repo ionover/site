@@ -1,10 +1,13 @@
 import { Contacts } from "@/components/contacts";
+import { Faq } from "@/components/faq";
 import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
 import { Hero } from "@/components/hero";
 import { HowToOrder } from "@/components/how-to-order";
 import { Pricing } from "@/components/pricing";
 import { Services } from "@/components/services";
+import { Testimonials } from "@/components/testimonials";
+import { TripOptions } from "@/components/trip-options";
 
 export default function HomePage() {
   return (
@@ -15,7 +18,10 @@ export default function HomePage() {
         <Hero />
         <Services />
         <HowToOrder />
+        <TripOptions />
         <Pricing />
+        <Testimonials />
+        <Faq />
         <Contacts />
       </main>
 

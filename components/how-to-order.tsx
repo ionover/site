@@ -1,6 +1,8 @@
 import { contacts, howToOrder } from "@/data/site";
 
 export function HowToOrder() {
+  const steps = howToOrder.steps;
+
   return (
     <section
       id="how-to-order"
@@ -10,15 +12,21 @@ export function HowToOrder() {
       <h2 className="mt-3 text-3xl font-semibold tracking-tight text-slate">{howToOrder.title}</h2>
       <p className="mt-3 max-w-2xl text-sm leading-7 text-slate/75">{howToOrder.intro}</p>
 
-      <div className="mt-6 grid gap-4 md:grid-cols-3">
-        {howToOrder.steps.map((step) => (
-          <div key={step.num} className="rounded-2xl border border-slate/10 bg-slate/5 p-5">
-            <p className="text-2xl font-bold text-amber/60">{step.num}</p>
-            <p className="mt-3 text-base font-semibold text-slate">{step.title}</p>
-            <p className="mt-2 text-sm leading-6 text-slate/70">{step.text}</p>
-          </div>
-        ))}
-      </div>
+      {steps.length > 0 ? (
+        <div className="mt-6 grid gap-4 md:grid-cols-3">
+          {steps.map((step) => (
+            <div key={step.num} className="rounded-2xl border border-slate/10 bg-slate/5 p-5">
+              <p className="text-2xl font-bold text-amber/60">{step.num}</p>
+              <p className="mt-3 text-base font-semibold text-slate">{step.title}</p>
+              <p className="mt-2 text-sm leading-6 text-slate/70">{step.text}</p>
+            </div>
+          ))}
+        </div>
+      ) : (
+        <p className="mt-5 text-sm leading-7 text-slate/70">
+          Этапы заказа обновляются. Позвоните или напишите в Telegram, чтобы согласовать поездку.
+        </p>
+      )}
 
       <div className="mt-5 flex flex-col gap-4 rounded-2xl border border-slate/10 bg-slate/5 p-5 sm:flex-row sm:items-center sm:justify-between">
         <p className="text-sm leading-7 text-slate/75">{howToOrder.cancelNote}</p>

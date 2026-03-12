@@ -1,6 +1,8 @@
 import { contacts } from "@/data/site";
 
 export function Contacts() {
+  const telegramLabel = contacts.telegram.replace("https://t.me/", "@");
+
   return (
     <section
       id="contacts"
@@ -27,7 +29,7 @@ export function Contacts() {
           rel="noreferrer"
         >
           <p className="text-sm text-slate/60">Telegram</p>
-          <p className="mt-2 text-xl font-semibold">@Vova_0888</p>
+          <p className="mt-2 text-xl font-semibold">{telegramLabel}</p>
         </a>
         <a
           className="rounded-2xl bg-white p-5 text-slate shadow-soft ring-1 ring-slate/10 transition hover:ring-slate/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber/35"

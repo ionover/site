@@ -25,7 +25,11 @@ export const siteMeta = {
 export const navigation: NavItem[] = [
   { id: "hero", label: "Главная" },
   { id: "services", label: "Услуги" },
+  { id: "how-to-order", label: "Как заказать" },
+  { id: "trip-options", label: "Поездки" },
   { id: "pricing", label: "Цены" },
+  { id: "testimonials", label: "Отзывы" },
+  { id: "faq", label: "FAQ" },
   { id: "contacts", label: "Контакты" },
 ];
 

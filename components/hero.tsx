@@ -2,13 +2,22 @@ import Image from "next/image";
 import { contacts, heroContent, siteMeta } from "@/data/site";
 
 export function Hero() {
+  const description =
+    heroContent.description.length > 0
+      ? heroContent.description
+      : ["Трансферы и междугородние поездки по Крыму по предварительной договоренности."];
+  const highlights =
+    heroContent.highlights.length > 0
+      ? heroContent.highlights
+      : ["Прямая связь с водителем", "Фиксация условий заранее", "Аккуратная подача ко времени"];
+
   return (
     <section id="hero" className="grid gap-6 lg:grid-cols-[1.05fr_0.95fr]">
       <div className="rounded-[32px] border border-white/70 bg-slate p-6 text-white shadow-soft sm:p-8">
         <p className="text-sm font-semibold uppercase tracking-[0.24em] text-amber-200">{heroContent.eyebrow}</p>
         <h1 className="mt-4 max-w-2xl text-4xl font-semibold tracking-tight sm:text-5xl">{heroContent.title}</h1>
         <div className="mt-6 grid gap-3 text-base leading-7 text-white/80">
-          {heroContent.description.map((paragraph) => (
+          {description.map((paragraph) => (
             <p key={paragraph}>{paragraph}</p>
           ))}
         </div>
@@ -31,7 +40,7 @@ export function Hero() {
         </div>
 
         <ul className="mt-8 grid gap-3 sm:grid-cols-3">
-          {heroContent.highlights.map((item) => (
+          {highlights.map((item) => (
             <li key={item} className="rounded-2xl border border-white/15 bg-white/5 p-4 text-sm leading-6">
               {item}
             </li>
