@@ -9,13 +9,13 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        sand: "#f6efe3",
-        slate: "#14202b",
-        amber: "#d78d34",
-        mist: "#dce5ea",
+        sand: "#f4e5d1",
+        slate: "#2f2319",
+        amber: "#b86e2f",
+        mist: "#e7d9c7",
       },
       boxShadow: {
-        soft: "0 20px 60px rgba(20, 32, 43, 0.12)",
+        soft: "0 14px 34px rgba(73, 49, 30, 0.14)",
       },
     },
   },

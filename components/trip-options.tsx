@@ -7,7 +7,7 @@ export function TripOptions() {
   return (
     <section
       id="trip-options"
-      className="rounded-[32px] border border-white/70 bg-white/80 p-6 shadow-soft sm:p-8"
+      className="rounded-[32px] border border-[#d8c6ad] bg-[#fff9ef] p-6 shadow-soft sm:p-8"
     >
       <p className="text-sm font-semibold uppercase tracking-[0.24em] text-amber">Сценарии поездок</p>
       <h2 className="mt-3 text-3xl font-semibold tracking-tight text-slate">{tripOptions.title}</h2>
@@ -15,12 +15,12 @@ export function TripOptions() {
       {columns.length > 0 ? (
         <div className="mt-6 grid gap-4 lg:grid-cols-2">
           {columns.map((column) => (
-            <article key={column.title} className="rounded-2xl border border-slate/10 bg-slate/5 p-5">
+            <article key={column.title} className="rounded-2xl border border-[#d8c5ad] bg-[#f7e8d3] p-5">
               <h3 className="text-lg font-semibold text-slate">{column.title}</h3>
               <p className="mt-2 text-sm leading-7 text-slate/70">{column.description}</p>
               <div className="mt-4 grid gap-3">
                 {column.items.map((item) => (
-                  <div key={item.title} className="rounded-xl border border-slate/10 bg-white/70 p-4">
+                  <div key={item.title} className="rounded-xl border border-[#d8c5ad] bg-[#fff4e6] p-4">
                     <p className="text-sm font-semibold text-slate">{item.title}</p>
                     <p className="mt-1 text-sm leading-6 text-slate/70">{item.text}</p>
                   </div>
@@ -38,7 +38,7 @@ export function TripOptions() {
       {features.length > 0 && (
         <div className="mt-5 grid gap-3 md:grid-cols-3">
           {features.map((feature) => (
-            <div key={feature.title} className="rounded-2xl border border-slate/10 bg-white px-4 py-4">
+            <div key={feature.title} className="rounded-2xl border border-[#d8c5ad] bg-[#fff4e6] px-4 py-4">
               <p className="text-sm font-semibold text-slate">{feature.title}</p>
               <p className="mt-2 text-sm leading-6 text-slate/70">{feature.text}</p>
             </div>
