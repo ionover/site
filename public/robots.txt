@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://krimea-taxi.ru/sitemap.xml
