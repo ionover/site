@@ -5,7 +5,6 @@ export function Hero() {
   const shortDescription =
     heroContent.description[0] ??
     "Трансферы и междугородние поездки по Крыму по предварительной договоренности.";
-  const trustPoint = heroContent.highlights[1] ?? "Стаж вождения более 30 лет";
 
   return (
     <section id="hero" className="grid gap-6 lg:grid-cols-[0.95fr_1.05fr]">
@@ -21,12 +20,12 @@ export function Hero() {
           </p>
         </div>
 
-        <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+        <div className="mt-8 flex flex-col gap-3">
           <a
             className="rounded-full bg-amber px-5 py-3 text-center text-base font-semibold text-sand transition hover:bg-[#945327] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber/35"
             href={contacts.phoneHref}
           >
-            Позвонить: {contacts.phoneDisplay}
+            {contacts.phoneDisplay}
           </a>
           <a
             className="rounded-full border border-[#d6b28c]/45 bg-[#5c4230] px-5 py-3 text-center text-base font-semibold text-sand transition hover:bg-[#674a35] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/35"
@@ -38,9 +37,6 @@ export function Hero() {
           </a>
         </div>
 
-        <p className="mt-6 rounded-2xl border border-[#d6b28c]/35 bg-[#553d2c] p-4 text-sm leading-6 text-sand/90">
-          {trustPoint}
-        </p>
       </div>
 
       <div className="overflow-hidden rounded-[24px] border border-[#c8af91] bg-[#f7e9d3] shadow-soft">

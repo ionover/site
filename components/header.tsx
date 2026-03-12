@@ -16,7 +16,7 @@ export function Header() {
   };
 
   return (
-    <header className="rounded-[24px] border border-[#c8af91] bg-[#f7e9d3] px-5 py-4 shadow-soft sm:px-6">
+    <header className="sticky top-3 z-50 rounded-[24px] border border-[#c8af91] bg-[#f7e9d3] px-5 py-4 shadow-soft sm:px-6">
       <div className="flex items-start justify-between gap-4 lg:items-center">
         <div>
           <p className="text-xs font-semibold uppercase tracking-[0.24em] text-amber">{siteMeta.name}</p>

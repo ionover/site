@@ -20,6 +20,10 @@ html {
   scroll-behavior: smooth;
 }
 
+section[id] {
+  scroll-margin-top: 11rem;
+}
+
 body {
   position: relative;
   margin: 0;
