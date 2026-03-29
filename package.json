@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "local": "bash ./scripts/run-local.sh",
+    "prod:ps": "powershell -ExecutionPolicy Bypass -File .\\scripts\\run-prod-win.ps1",
     "build": "next build",
     "start": "next start",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
