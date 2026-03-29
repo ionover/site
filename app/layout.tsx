@@ -3,12 +3,21 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://krimea-taxi.ru"),
+  manifest: "/site.webmanifest",
   title: {
     default: "Крым Такси — частный трансфер по Крыму",
     template: "%s | Крым Такси",
   },
   description:
     "Частный трансфер и междугороднее такси по Крыму: поездки без посредников, понятная связь с водителем и комфортный маршрут.",
+  icons: {
+    icon: [
+      { url: "/icons/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/icons/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+    ],
+    apple: [{ url: "/icons/apple-touch-icon.png", sizes: "180x180", type: "image/png" }],
+    shortcut: ["/icons/favicon-32x32.png"],
+  },
   openGraph: {
     title: "Крым Такси — частный трансфер по Крыму",
     description:
