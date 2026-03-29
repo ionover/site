@@ -1,7 +1,9 @@
 "use client";
 
 import { useState } from "react";
-import { contacts, navigation, siteMeta } from "@/data/site";
+import Image from "next/image";
+import faviconer from "@/faviconer.png";
+import { contacts, navigation } from "@/data/site";
 
 const primaryNavIds = ["services", "cars", "pricing", "faq", "contacts"] as const;
 
@@ -16,21 +18,19 @@ export function Header() {
   };
 
   return (
-    <header className="sticky top-3 z-50 rounded-[24px] border border-[#c8af91] bg-[#f7e9d3] px-5 py-4 shadow-soft sm:px-6">
-      <div className="flex items-start justify-between gap-4 lg:items-center">
-        <div>
-          <p className="text-xs font-semibold uppercase tracking-[0.24em] text-amber">{siteMeta.name}</p>
-          <p className="mt-1 max-w-xl text-sm leading-6 text-slate/80">{siteMeta.tagline}</p>
-        </div>
-
-        <div className="flex items-center gap-2 lg:hidden">
+    <header className="sticky top-0 z-50 w-full border-b border-[#c8af91] bg-white shadow-soft">
+      <div className="mx-auto flex w-full max-w-6xl items-center justify-between gap-4 px-5 py-4 sm:px-8 lg:px-10">
+        <div className="flex items-center gap-12">
+          <Image src={faviconer} alt="Крым Такси" width={faviconer.width} height={faviconer.height} priority />
           <a
             className="inline-flex w-fit rounded-full bg-slate px-4 py-2.5 text-sm font-semibold tracking-wide text-sand transition hover:bg-[#413126] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate/30"
             href={contacts.phoneHref}
           >
             {contacts.phoneDisplay}
           </a>
+        </div>
 
+        <div className="flex items-center gap-2 lg:hidden">
           <button
             type="button"
             className="inline-flex rounded-full border border-[#c8af91] bg-[#efdec4] px-3.5 py-2 text-sm font-semibold text-slate transition hover:border-[#b89f82] hover:bg-[#e8d4b6] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber/35"
@@ -41,11 +41,9 @@ export function Header() {
             {isMenuOpen ? "Закрыть" : "Меню"}
           </button>
         </div>
-      </div>
 
-      <div className="mt-4 hidden items-center justify-between gap-6 lg:flex">
-        <nav aria-label="Основная навигация">
-          <ul className="flex flex-wrap gap-2.5 text-sm text-slate/85">
+        <nav aria-label="Основная навигация" className="hidden lg:block">
+          <ul className="flex flex-wrap justify-end gap-2.5 text-sm text-slate/85">
             {primaryNavigation.map((item) => (
               <li key={item.id}>
                 <a
@@ -59,40 +57,35 @@ export function Header() {
             ))}
           </ul>
         </nav>
-
-        <a
-          className="inline-flex w-fit rounded-full bg-slate px-4 py-2.5 text-sm font-semibold tracking-wide text-sand transition hover:bg-[#413126] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate/30"
-          href={contacts.phoneHref}
-        >
-          {contacts.phoneDisplay}
-        </a>
       </div>
 
       <nav
         id="mobile-main-nav"
         aria-label="Мобильная навигация"
-        className={`${isMenuOpen ? "mt-4 grid" : "hidden"} gap-3 lg:hidden`}
+        className={`${isMenuOpen ? "grid" : "hidden"} border-t border-[#d9c3a8] lg:hidden`}
       >
-        <ul className="grid gap-2 text-sm text-slate/85">
-          {primaryNavigation.map((item) => (
-            <li key={item.id}>
-              <a
-                className="block rounded-2xl border border-[#c8af91] bg-[#efdec4] px-3.5 py-2.5 transition hover:border-[#b89f82] hover:bg-[#e8d4b6] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber/35"
-                href={`#${item.id}`}
-                onClick={closeMenu}
-              >
-                {item.label}
-              </a>
-            </li>
-          ))}
-        </ul>
-        <a
-          className="inline-flex w-fit rounded-full bg-slate px-4 py-2.5 text-sm font-semibold tracking-wide text-sand transition hover:bg-[#413126] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate/30"
-          href={contacts.phoneHref}
-          onClick={closeMenu}
-        >
-          {contacts.phoneDisplay}
-        </a>
+        <div className="mx-auto grid w-full max-w-6xl gap-3 px-5 py-4 sm:px-8 lg:px-10">
+          <ul className="grid gap-2 text-sm text-slate/85">
+            {primaryNavigation.map((item) => (
+              <li key={item.id}>
+                <a
+                  className="block rounded-2xl border border-[#c8af91] bg-[#efdec4] px-3.5 py-2.5 transition hover:border-[#b89f82] hover:bg-[#e8d4b6] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber/35"
+                  href={`#${item.id}`}
+                  onClick={closeMenu}
+                >
+                  {item.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+          <a
+            className="inline-flex w-fit rounded-full bg-slate px-4 py-2.5 text-sm font-semibold tracking-wide text-sand transition hover:bg-[#413126] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate/30"
+            href={contacts.phoneHref}
+            onClick={closeMenu}
+          >
+            {contacts.phoneDisplay}
+          </a>
+        </div>
       </nav>
     </header>
   );

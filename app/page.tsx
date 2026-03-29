@@ -12,22 +12,24 @@ import { TripOptions } from "@/components/trip-options";
 
 export default function HomePage() {
   return (
-    <div className="mx-auto flex min-h-screen w-full max-w-6xl flex-col px-5 py-5 sm:px-8 sm:py-7 lg:px-10 lg:py-8">
+    <div className="min-h-screen w-full">
       <Header />
 
-      <main className="mt-6 flex-1 space-y-6">
-        <Hero />
-        <Services />
-        <Cars />
-        <Pricing />
-        <TripOptions />
-        <HowToOrder />
-        <Testimonials />
-        <Faq />
-        <Contacts />
-      </main>
+      <div className="mx-auto flex w-full max-w-6xl flex-col px-5 py-5 sm:px-8 sm:py-7 lg:px-10 lg:py-8">
+        <main className="flex-1 space-y-6">
+          <Hero />
+          <Services />
+          <Cars />
+          <Pricing />
+          <TripOptions />
+          <HowToOrder />
+          <Testimonials />
+          <Faq />
+          <Contacts />
+        </main>
 
-      <Footer />
+        <Footer />
+      </div>
     </div>
   );
 }
