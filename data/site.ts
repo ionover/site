@@ -1,3 +1,12 @@
+﻿import type { StaticImageData } from "next/image";
+import solFront from "@/media/solaris/sol_front.jpg";
+import solFrontBest from "@/media/solaris/sol_front_best.jpg";
+import solInsideBack from "@/media/solaris/sol_inside_back.jpg";
+import solInsideFront from "@/media/solaris/sol_inside_front.jpg";
+import solInsideRight from "@/media/solaris/sol_inside_right.jpg";
+import toyBack from "@/media/toyota/toy_back.jpeg";
+import toyFront from "@/media/toyota/toy_front.jpeg";
+import toySide from "@/media/toyota/toy_side.jpeg";
 export type NavItem = {
   id: string;
   label: string;
@@ -18,6 +27,8 @@ export type CarSlide = {
   id: string;
   title: string;
   description: string;
+  image: StaticImageData;
+  imageAlt: string;
 };
 
 export const siteMeta = {
@@ -41,16 +52,17 @@ export const navigation: NavItem[] = [
 ];
 
 export const heroContent = {
-  eyebrow: "Частное такси по Крыму",
-  title: "Трансферы и междугородние поездки по Крыму напрямую с водителем.",
+  eyebrow: "Крым Такси",
+  title: "Крым Такси",
   description: [
-    "Спокойные поездки без посредников, с предварительным согласованием маршрута, времени подачи и стоимости. Стаж вождения более 30 лет.",
-    "Подходит для трансфера из аэропорта, межгорода, поездок по делам и личных маршрутов по Крыму.",
+    "Никаких посредников: вы общаетесь напрямую с водителем и заранее знаете, какой автомобиль приедет.",
+    "Стаж вождения более 30 лет. Доставлю в любую точку Крыма без лишних проблем.",
   ],
   highlights: [
-    "Прямая связь с водителем без посредников",
-    "Стаж вождения более 30 лет",
-    "Поездки по Крыму и межгороду по предварительному заказу",
+    "Бронирование такси по межгороду",
+    "Встреча в аэропорту и на вокзале с комфортом",
+    "Персональный трансфер в любой город",
+    "Звоните заранее",
   ],
 };
 
@@ -94,19 +106,60 @@ export const carsSection = {
   autoplayMs: 6000,
   slides: [
     {
-      id: "city-transfer",
-      title: "Трансфер по Крыму",
-      description: "Чистый салон, мягкий ход и спокойная поездка по заранее согласованному маршруту.",
+      id: "toyota-front",
+      title: "Toyota front",
+      description: "Exterior front view.",
+      image: toyFront,
+      imageAlt: "Toyota front view",
     },
     {
-      id: "airport-pickup",
-      title: "Встреча из аэропорта",
-      description: "Комфортная подача ко времени прилета и помощь с багажом без лишней суеты.",
+      id: "toyota-side",
+      title: "Toyota side",
+      description: "Exterior side view.",
+      image: toySide,
+      imageAlt: "Toyota side view",
     },
     {
-      id: "intercity-ride",
-      title: "Межгород без спешки",
-      description: "Автомобиль обслуживается вовремя, чтобы дорога была ровной и предсказуемой.",
+      id: "toyota-back",
+      title: "Toyota back",
+      description: "Exterior rear view.",
+      image: toyBack,
+      imageAlt: "Toyota rear view",
+    },
+    {
+      id: "solaris-front",
+      title: "Solaris front",
+      description: "Exterior front view.",
+      image: solFront,
+      imageAlt: "Solaris front view",
+    },
+    {
+      id: "solaris-front-best",
+      title: "Solaris front alt",
+      description: "Alternative front angle.",
+      image: solFrontBest,
+      imageAlt: "Solaris front view alternative angle",
+    },
+    {
+      id: "solaris-inside-front",
+      title: "Solaris interior front",
+      description: "Front interior view.",
+      image: solInsideFront,
+      imageAlt: "Solaris interior front seats",
+    },
+    {
+      id: "solaris-inside-right",
+      title: "Solaris interior right",
+      description: "Right side interior view.",
+      image: solInsideRight,
+      imageAlt: "Solaris interior right side",
+    },
+    {
+      id: "solaris-inside-back",
+      title: "Solaris interior back",
+      description: "Rear interior view.",
+      image: solInsideBack,
+      imageAlt: "Solaris interior back seats",
     },
   ] satisfies CarSlide[],
 };
@@ -229,3 +282,4 @@ export const tripOptions = {
     },
   ] satisfies InfoItem[],
 };
+
