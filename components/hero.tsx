@@ -30,14 +30,6 @@ export function Hero() {
           >
             {contacts.phoneDisplay}
           </a>
-          <a
-            className="flex h-[60px] items-center justify-center rounded-full border border-[#d6b28c]/45 bg-[#5c4230] px-5 text-center text-2xl font-semibold text-sand transition hover:bg-[#674a35] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/35"
-            href={contacts.telegram}
-            target="_blank"
-            rel="noreferrer"
-          >
-            Написать в Telegram
-          </a>
         </div>
       </div>
 
@@ -46,12 +38,23 @@ export function Hero() {
           <Image src={toySideImage} alt="Автомобиль Toyota для трансфера по Крыму" fill className="object-cover" priority />
           <div className="absolute inset-0 bg-gradient-to-t from-[#3b2a1f]/78 via-[#3b2a1f]/24 to-transparent" />
         </div>
-        <div className="p-6 sm:p-7">
-          <p className="text-sm font-semibold uppercase tracking-[0.24em] text-amber">Машина для поездок</p>
-          <p className="mt-3 text-sm leading-7 text-slate/75">
-            Чистый и ухоженный автомобиль для междугородних и частных поездок по Крыму с заранее согласованным временем
-            подачи.
-          </p>
+        <div className="flex flex-col gap-3 p-6 sm:p-7">
+          <a
+            className="flex h-[60px] items-center justify-center rounded-full border border-[#d6b28c]/45 bg-[#5c4230] px-5 text-center text-2xl font-semibold text-sand transition hover:bg-[#674a35] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/35"
+            href={contacts.telegram}
+            target="_blank"
+            rel="noreferrer"
+          >
+            Написать в Telegram
+          </a>
+          <a
+            className="flex h-[60px] items-center justify-center rounded-full border border-[#d6b28c]/45 bg-[#5c4230] px-5 text-center text-2xl font-semibold text-sand transition hover:bg-[#674a35] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/35"
+            href={contacts.telegram}
+            target="_blank"
+            rel="noreferrer"
+          >
+            Написать в Max
+          </a>
         </div>
       </div>
     </section>
