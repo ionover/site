@@ -57,10 +57,6 @@ export function Cars() {
               <div className="relative aspect-[16/10] sm:aspect-[16/9]">
                 <Image src={siteMeta.placeholderImage} alt={carsSection.imageAlt} fill className="object-cover" />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#3b2a1f]/76 via-transparent to-transparent" />
-                <div className="absolute bottom-0 left-0 right-0 p-4 text-sand sm:p-5">
-                  <p className="text-lg font-semibold">{slide.title}</p>
-                  <p className="mt-1 text-sm text-white/90 sm:text-base">{slide.description}</p>
-                </div>
               </div>
             </article>
           ))}
