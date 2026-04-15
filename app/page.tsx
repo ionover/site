@@ -11,24 +11,50 @@ import { Testimonials } from "@/components/testimonials";
 import { TripOptions } from "@/components/trip-options";
 
 export default function HomePage() {
+  const sectionWidth = {
+    wide: "mx-auto w-full max-w-[1500px]",
+    medium: "mx-auto w-full max-w-[1320px]",
+    narrow: "mx-auto w-full max-w-[1120px]",
+  } as const;
+
   return (
     <div className="min-h-screen w-full">
       <Header />
 
-      <div className="mx-auto flex w-full max-w-6xl flex-col px-5 py-5 sm:px-8 sm:py-7 lg:px-10 lg:py-8">
+      <div className="w-full px-5 py-5 sm:px-8 sm:py-7 lg:px-10 lg:py-8">
         <main className="flex-1 space-y-6">
-          <Hero />
-          <Services />
-          <Cars />
-          <Pricing />
-          <TripOptions />
-          <HowToOrder />
-          <Testimonials />
-          <Faq />
-          <Contacts />
+          <div className={sectionWidth.wide}>
+            <Hero />
+          </div>
+          <div className={sectionWidth.wide}>
+            <Services />
+          </div>
+          <div className={sectionWidth.wide}>
+            <Cars />
+          </div>
+          <div className={sectionWidth.wide}>
+            <Pricing />
+          </div>
+          <div className={sectionWidth.medium}>
+            <TripOptions />
+          </div>
+          <div className={sectionWidth.medium}>
+            <HowToOrder />
+          </div>
+          <div className={sectionWidth.medium}>
+            <Testimonials />
+          </div>
+          <div className={sectionWidth.narrow}>
+            <Faq />
+          </div>
+          <div className={sectionWidth.narrow}>
+            <Contacts />
+          </div>
         </main>
 
-        <Footer />
+        <div className={`${sectionWidth.medium} mt-6`}>
+          <Footer />
+        </div>
       </div>
     </div>
   );

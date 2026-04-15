@@ -19,7 +19,7 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-[#c8af91] bg-white shadow-soft">
-      <div className="mx-auto flex w-full max-w-6xl items-center justify-between gap-4 px-5 py-4 sm:px-8 lg:px-10">
+      <div className="mx-auto flex w-full max-w-[1500px] items-center justify-between gap-4 px-5 py-4 sm:px-8 lg:px-10">
         <div className="flex items-center gap-12">
           <Image src={faviconer} alt="Крым Такси" width={faviconer.width} height={faviconer.height} priority />
           <a
@@ -64,7 +64,7 @@ export function Header() {
         aria-label="Мобильная навигация"
         className={`${isMenuOpen ? "grid" : "hidden"} border-t border-[#d9c3a8] lg:hidden`}
       >
-        <div className="mx-auto grid w-full max-w-6xl gap-3 px-5 py-4 sm:px-8 lg:px-10">
+        <div className="mx-auto grid w-full max-w-[1500px] gap-3 px-5 py-4 sm:px-8 lg:px-10">
           <ul className="grid gap-2 text-sm text-slate/85">
             {primaryNavigation.map((item) => (
               <li key={item.id}>

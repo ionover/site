@@ -35,7 +35,14 @@ export function Hero() {
 
       <div className="flex h-full flex-col overflow-hidden rounded-[24px] border border-[#c8af91] bg-[#f7e9d3] shadow-soft">
         <div className="relative min-h-[220px] flex-1 bg-[#f7e9d3] sm:min-h-[280px] lg:min-h-[320px]">
-          <Image src={toySideImage} alt="Автомобиль Toyota для трансфера по Крыму" fill className="object-contain" priority />
+          <Image
+            src={toySideImage}
+            alt="Автомобиль Toyota для трансфера по Крыму"
+            fill
+            sizes="(max-width: 1024px) 100vw, 50vw"
+            className="object-cover object-center"
+            priority
+          />
         </div>
         <div className="flex flex-col gap-3 p-5 sm:p-6">
           <a
