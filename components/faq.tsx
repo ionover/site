@@ -6,24 +6,40 @@ export function Faq() {
   return (
     <section
       id="faq"
-      className="rounded-[24px] border border-[#c8af91] bg-[#f7e9d3] p-6 shadow-soft sm:p-8"
+      className="dark-road section-pad text-white"
     >
-      <p className="text-sm font-semibold uppercase tracking-[0.24em] text-amber">FAQ</p>
-      <h2 className="mt-3 text-3xl font-semibold tracking-tight text-slate">{faqContent.title}</h2>
-      {hasItems ? (
-        <div className="mt-6 grid gap-3.5">
-          {faqContent.items.map((item) => (
-            <article key={item.question} className="rounded-2xl border border-[#c7ae90] bg-[#f0ddc2] p-5">
-              <h3 className="text-base font-semibold text-slate">{item.question}</h3>
-              <p className="mt-2 text-sm leading-7 text-slate/75">{item.answer}</p>
-            </article>
-          ))}
+      <div className="site-row grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
+        <div>
+          <h2 className="section-title text-white">{faqContent.title}</h2>
+          <p className="mt-5 max-w-lg text-[clamp(1.08rem,2.4vw,1.25rem)] leading-[1.75] text-white/85">
+            Ответы на основные вопросы о бронировании, машинах, отмене и поездках по межгороду.
+          </p>
         </div>
-      ) : (
-        <p className="mt-4 text-sm leading-7 text-slate/70">
-          Блок с вопросами обновляется. Уточняйте детали поездки по телефону или в Telegram.
-        </p>
-      )}
+
+        {hasItems ? (
+          <div className="grid gap-3">
+            {faqContent.items.map((item, index) => (
+              <details
+                key={item.question}
+                className="group bg-white px-5 py-4 text-[#202020] shadow-[0_12px_28px_rgba(0,0,0,0.18)]"
+                open={index === 0}
+              >
+                <summary className="cursor-pointer list-none font-[Montserrat] text-lg font-bold marker:hidden sm:text-xl">
+                  <span className="inline-flex w-full items-center justify-between gap-5">
+                    {item.question}
+                    <span className="text-2xl leading-none text-[#2ea3f2] group-open:rotate-45">+</span>
+                  </span>
+                </summary>
+                <p className="mt-3 text-[1.03rem] leading-[1.75] text-[#555]">{item.answer}</p>
+              </details>
+            ))}
+          </div>
+        ) : (
+          <p className="mt-4 text-[1.08rem] leading-[1.75] text-white/85">
+            Блок с вопросами обновляется. Уточняйте детали поездки по телефону или в Telegram.
+          </p>
+        )}
+      </div>
     </section>
   );
 }

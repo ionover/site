@@ -4,16 +4,15 @@
 
 :root {
   color-scheme: light;
-  --bg-top: #dbc3a4;
-  --bg-mid: #efdfc7;
-  --bg-bottom: #ddc8ad;
-  --text-main: #33261c;
-  --heading-main: #2b1f16;
-  --brand: #a65f2d;
-  --grain: rgba(74, 49, 28, 0.05);
-  --surface-main: #f7e9d3;
-  --surface-alt: #f2dfc3;
-  --line-main: #c8af91;
+  --text-main: #555555;
+  --heading-main: #202020;
+  --brand: #1f6ea9;
+  --ink: #1f1f1f;
+  --deep-blue: #162f46;
+  --deep-blue-soft: #213d56;
+  --surface-main: #ffffff;
+  --surface-alt: #f1f5f9;
+  --line-main: #e4ebf2;
 }
 
 html {
@@ -21,7 +20,7 @@ html {
 }
 
 section[id] {
-  scroll-margin-top: 11rem;
+  scroll-margin-top: 6rem;
 }
 
 body {
@@ -30,8 +29,10 @@ body {
   min-height: 100vh;
   background: #ffffff;
   color: var(--text-main);
-  font-family: "Segoe UI", Tahoma, Verdana, sans-serif;
-  line-height: 1.55;
+  font-family: "Open Sans", Arial, "Segoe UI", sans-serif;
+  font-size: 18px;
+  line-height: 1.7;
+  font-weight: 500;
   text-rendering: optimizeLegibility;
 }
 
@@ -43,8 +44,10 @@ h1,
 h2,
 h3 {
   color: var(--heading-main);
-  font-family: "Palatino Linotype", "Book Antiqua", Georgia, serif;
-  letter-spacing: 0.01em;
+  font-family: Montserrat, "Open Sans", Arial, sans-serif;
+  letter-spacing: 0;
+  line-height: 1.18;
+  font-weight: 700;
 }
 
 a {
@@ -58,4 +61,55 @@ a {
 
 ::selection {
   background: color-mix(in srgb, var(--brand) 22%, white);
+}
+
+.site-row {
+  width: min(100%, 1280px);
+  margin-inline: auto;
+  padding-inline: clamp(20px, 5vw, 72px);
+}
+
+.site-row-full {
+  width: min(100%, 1440px);
+  margin-inline: auto;
+}
+
+.section-pad {
+  padding-block: clamp(54px, 8vw, 112px);
+}
+
+.section-title {
+  font-size: clamp(2.25rem, 6vw, 3rem);
+  line-height: 1.25;
+}
+
+.section-kicker {
+  font-family: Montserrat, "Open Sans", Arial, sans-serif;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  line-height: 1.8;
+  text-transform: uppercase;
+}
+
+.old-paper {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.94), rgba(247, 250, 252, 0.98)),
+    radial-gradient(circle at top left, rgba(46, 163, 242, 0.12), transparent 34%);
+}
+
+.dark-road {
+  background:
+    linear-gradient(120deg, rgba(15, 35, 54, 0.94), rgba(38, 64, 86, 0.9)),
+    radial-gradient(circle at top right, rgba(46, 163, 242, 0.28), transparent 38%);
+}
+
+@media (max-width: 640px) {
+  body {
+    font-size: 17px;
+  }
+
+  .site-row {
+    padding-inline: 20px;
+  }
 }

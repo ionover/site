@@ -6,14 +6,23 @@ export function Services() {
   return (
     <section
       id="services"
-      className="rounded-[24px] border border-[#c8af91] bg-[#f7e9d3] p-6 shadow-soft sm:p-8"
+      className="old-paper section-pad relative border-y border-[#e7eef5]"
     >
+      <div className="site-row">
+        <div className="mx-auto max-w-3xl text-center">
+          <h2 className="section-title">{services.title}</h2>
+          <p className="mt-4 text-[clamp(1.05rem,2.4vw,1.25rem)] leading-[1.75] text-[#555]">
+            {services.intro}
+          </p>
+        </div>
+      </div>
+
       {items.length > 0 ? (
-        <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-4">
+        <div className="mx-auto mt-10 grid w-[calc(100%_-_40px)] max-w-[1280px] grid-cols-1 border-x border-t border-[#e7eef5] bg-white/70 sm:grid-cols-2 lg:grid-cols-4">
           {items.map((item) => (
             <div
               key={item}
-              className="flex min-h-[165px] items-center justify-center rounded-2xl border border-[#c7ae90] bg-[#f0ddc2] px-7 py-7 text-center font-semibold uppercase tracking-[0.07em] text-[14px] leading-[1.8em] text-slate/90 [font-family:'Montserrat','Segoe_UI',Tahoma,sans-serif] sm:min-h-[180px] sm:px-8 sm:py-8"
+              className="flex min-h-[132px] items-center justify-center border-b border-r border-[#e7eef5] px-5 py-9 text-center font-[Montserrat] text-sm font-semibold uppercase tracking-[0.08em] leading-[1.8] text-[#27384a] sm:px-6"
             >
               {item}
             </div>

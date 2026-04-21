@@ -6,26 +6,29 @@ export function Testimonials() {
   return (
     <section
       id="testimonials"
-      className="rounded-[24px] border border-[#c8af91] bg-[#f7e9d3] p-6 shadow-soft sm:p-8"
+      className="section-pad bg-white"
     >
-      <p className="text-sm font-semibold uppercase tracking-[0.24em] text-amber">Отзывы</p>
-      <h2 className="mt-3 text-3xl font-semibold tracking-tight text-slate">
-        {testimonialsContent.title}
-      </h2>
-      {hasItems ? (
-        <div className="mt-6 grid gap-3.5 md:grid-cols-3">
-          {testimonialsContent.items.map((item) => (
-            <blockquote key={`${item.author}-${item.text}`} className="rounded-2xl border border-[#c7ae90] bg-[#f0ddc2] p-5">
-              <p className="text-sm leading-7 text-slate/80">“{item.text}”</p>
-              <cite className="mt-3 block text-sm font-semibold not-italic text-slate">{item.author}</cite>
-            </blockquote>
-          ))}
-        </div>
-      ) : (
-        <p className="mt-4 text-sm leading-7 text-slate/70">
-          Отзывы в процессе обновления. По запросу отправим актуальные примеры поездок.
-        </p>
-      )}
+      <div className="site-row text-center">
+        <h2 className="section-title">{testimonialsContent.title}</h2>
+        {hasItems ? (
+          <div className="mt-10 grid gap-8 md:grid-cols-3">
+            {testimonialsContent.items.map((item) => (
+              <blockquote key={`${item.author}-${item.text}`} className="px-3">
+                <p className="text-[clamp(1.03rem,2.3vw,1.16rem)] italic leading-[1.85] text-[#555]">
+                  {`"${item.text}"`}
+                </p>
+                <cite className="mt-5 block font-[Montserrat] text-lg font-bold not-italic text-[#202020]">
+                  {item.author}
+                </cite>
+              </blockquote>
+            ))}
+          </div>
+        ) : (
+          <p className="mt-4 text-[1.08rem] leading-[1.75] text-[#555]">
+            Отзывы в процессе обновления. По запросу отправим актуальные примеры поездок.
+          </p>
+        )}
+      </div>
     </section>
   );
 }

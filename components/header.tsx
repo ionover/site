@@ -18,12 +18,19 @@ export function Header() {
   };
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-[#c8af91] bg-white shadow-soft">
-      <div className="mx-auto flex w-full max-w-[1500px] items-center justify-between gap-4 px-5 py-4 sm:px-8 lg:px-10">
-        <div className="flex items-center gap-12">
-          <Image src={faviconer} alt="Крым Такси" width={faviconer.width} height={faviconer.height} priority />
+    <header className="sticky top-0 z-50 w-full border-b border-slate-200 bg-white shadow-[0_2px_18px_-6px_rgba(0,0,0,0.3)]">
+      <div className="site-row flex min-h-[76px] items-center justify-between gap-5 py-0">
+        <div className="flex min-w-0 items-center gap-5 sm:gap-9">
+          <Image
+            src={faviconer}
+            alt="Крым Такси"
+            width={faviconer.width}
+            height={faviconer.height}
+            className="h-12 w-auto sm:h-14"
+            priority
+          />
           <a
-            className="inline-flex w-fit rounded-full bg-slate px-4 py-2.5 text-sm font-semibold tracking-wide text-sand transition hover:bg-[#413126] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate/30"
+            className="hidden whitespace-nowrap font-[Montserrat] text-[clamp(1.15rem,3vw,1.75rem)] font-bold leading-none text-[#202020] transition hover:text-[#2ea3f2] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#2ea3f2]/35 sm:inline-flex"
             href={contacts.phoneHref}
           >
             {contacts.phoneDisplay}
@@ -33,7 +40,7 @@ export function Header() {
         <div className="flex items-center gap-2 lg:hidden">
           <button
             type="button"
-            className="inline-flex rounded-full border border-[#c8af91] bg-[#efdec4] px-3.5 py-2 text-sm font-semibold text-slate transition hover:border-[#b89f82] hover:bg-[#e8d4b6] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber/35"
+            className="inline-flex border border-slate-300 bg-white px-4 py-2.5 text-base font-bold text-[#202020] transition hover:border-[#2ea3f2] hover:text-[#2ea3f2] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#2ea3f2]/35"
             onClick={() => setIsMenuOpen((value) => !value)}
             aria-expanded={isMenuOpen}
             aria-controls="mobile-main-nav"
@@ -43,11 +50,11 @@ export function Header() {
         </div>
 
         <nav aria-label="Основная навигация" className="hidden lg:block">
-          <ul className="flex flex-wrap justify-end gap-2.5 text-sm text-slate/85">
+          <ul className="flex flex-wrap justify-end gap-x-7 gap-y-3 font-[Montserrat] text-[15px] font-semibold uppercase tracking-[0.02em] text-[#202020]">
             {primaryNavigation.map((item) => (
               <li key={item.id}>
                 <a
-                  className="rounded-full border border-[#c8af91] bg-[#efdec4] px-3 py-1.5 transition hover:border-[#b89f82] hover:bg-[#e8d4b6] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber/35"
+                  className="transition hover:text-[#2ea3f2] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#2ea3f2]/35"
                   href={`#${item.id}`}
                   onClick={closeMenu}
                 >
@@ -62,14 +69,14 @@ export function Header() {
       <nav
         id="mobile-main-nav"
         aria-label="Мобильная навигация"
-        className={`${isMenuOpen ? "grid" : "hidden"} border-t border-[#d9c3a8] lg:hidden`}
+        className={`${isMenuOpen ? "grid" : "hidden"} border-t border-slate-200 bg-white lg:hidden`}
       >
-        <div className="mx-auto grid w-full max-w-[1500px] gap-3 px-5 py-4 sm:px-8 lg:px-10">
-          <ul className="grid gap-2 text-sm text-slate/85">
+        <div className="site-row grid gap-3 py-5">
+          <ul className="grid gap-2 font-[Montserrat] text-base font-semibold uppercase text-[#202020]">
             {primaryNavigation.map((item) => (
               <li key={item.id}>
                 <a
-                  className="block rounded-2xl border border-[#c8af91] bg-[#efdec4] px-3.5 py-2.5 transition hover:border-[#b89f82] hover:bg-[#e8d4b6] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber/35"
+                  className="block border border-slate-200 px-4 py-3 transition hover:border-[#2ea3f2] hover:text-[#2ea3f2] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#2ea3f2]/35"
                   href={`#${item.id}`}
                   onClick={closeMenu}
                 >
@@ -79,7 +86,7 @@ export function Header() {
             ))}
           </ul>
           <a
-            className="inline-flex w-fit rounded-full bg-slate px-4 py-2.5 text-sm font-semibold tracking-wide text-sand transition hover:bg-[#413126] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate/30"
+            className="inline-flex w-fit border-2 border-[#202020] px-5 py-3 font-[Montserrat] text-lg font-bold text-[#202020] transition hover:border-[#2ea3f2] hover:text-[#2ea3f2] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#2ea3f2]/35"
             href={contacts.phoneHref}
             onClick={closeMenu}
           >

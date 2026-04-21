@@ -6,25 +6,47 @@ export function Pricing() {
   return (
     <section
       id="pricing"
-      className="rounded-[24px] border border-[#c8af91] bg-[#f7e9d3] p-6 shadow-soft sm:p-8"
+      className="section-pad bg-white"
     >
-      <p className="text-sm font-semibold uppercase tracking-[0.24em] text-amber">{pricesContent.title}</p>
-      <h2 className="mt-3 text-3xl font-semibold tracking-tight text-slate">Примеры маршрутов</h2>
-      <p className="mt-3 text-sm leading-7 text-slate/75">{pricesContent.note}</p>
-      {routes.length > 0 ? (
-        <div className="mt-6 grid gap-3.5">
-          {routes.map((route) => (
-            <div key={route.route} className="flex flex-col gap-1 rounded-2xl border border-[#c7ae90] bg-[#f0ddc2] px-4 py-4 text-sm sm:flex-row sm:items-center sm:justify-between">
-              <span className="text-slate/80">{route.route}</span>
-              <span className="font-semibold text-slate">{route.price}</span>
-            </div>
-          ))}
+      <div className="site-row">
+        <div className="text-center">
+          <h2 className="section-title">Цены</h2>
+          <p className="mx-auto mt-5 max-w-3xl text-[clamp(1.05rem,2.4vw,1.22rem)] leading-[1.75] text-[#555]">
+            {pricesContent.note}
+          </p>
         </div>
-      ) : (
-        <p className="mt-5 text-sm leading-7 text-slate/70">
-          Примеры маршрутов обновляются. Стоимость согласовывается заранее при обращении.
-        </p>
-      )}
+
+        {routes.length > 0 ? (
+          <div className="mt-10 overflow-x-auto">
+            <table className="w-full min-w-[620px] border-collapse text-center text-[clamp(1rem,2.1vw,1.12rem)]">
+              <thead>
+                <tr className="bg-[#f0f0f0]">
+                  <th className="border border-[#dddddd] px-4 py-4 font-[Montserrat] text-lg font-bold text-[#202020]">
+                    Маршрут
+                  </th>
+                  <th className="border border-[#dddddd] px-4 py-4 font-[Montserrat] text-lg font-bold text-[#202020]">
+                    Цена
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                {routes.map((route) => (
+                  <tr key={route.route} className="bg-[#fafafa]">
+                    <td className="border border-[#dddddd] px-4 py-4 text-[#555]">{route.route}</td>
+                    <td className="border border-[#dddddd] px-4 py-4 font-bold text-[#202020]">
+                      {route.price}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        ) : (
+          <p className="mt-5 text-[1.08rem] leading-[1.75] text-[#555]">
+            Примеры маршрутов обновляются. Стоимость согласовывается заранее при обращении.
+          </p>
+        )}
+      </div>
     </section>
   );
 }

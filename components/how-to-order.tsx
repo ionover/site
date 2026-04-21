@@ -6,45 +6,54 @@ export function HowToOrder() {
   return (
     <section
       id="how-to-order"
-      className="rounded-[24px] border border-[#c8af91] bg-[#f7e9d3] p-6 shadow-soft sm:p-8"
+      className="old-paper section-pad border-y border-[#e7eef5]"
     >
-      <p className="text-sm font-semibold uppercase tracking-[0.24em] text-amber">Как заказать</p>
-      <h2 className="mt-3 text-3xl font-semibold tracking-tight text-slate">{howToOrder.title}</h2>
-      <p className="mt-3 max-w-2xl text-sm leading-7 text-slate/75">{howToOrder.intro}</p>
-
-      {steps.length > 0 ? (
-        <div className="mt-6 grid gap-4 md:grid-cols-3">
-          {steps.map((step) => (
-            <div key={step.num} className="rounded-2xl border border-[#c7ae90] bg-[#f0ddc2] p-5">
-              <p className="text-2xl font-bold text-amber/60">{step.num}</p>
-              <p className="mt-3 text-base font-semibold text-slate">{step.title}</p>
-              <p className="mt-2 text-sm leading-6 text-slate/70">{step.text}</p>
-            </div>
-          ))}
+      <div className="site-row">
+        <div className="text-center">
+          <h2 className="section-title">{howToOrder.title}</h2>
+          <p className="mx-auto mt-5 max-w-3xl text-[clamp(1.05rem,2.4vw,1.22rem)] leading-[1.75] text-[#555]">
+            {howToOrder.intro}
+          </p>
         </div>
-      ) : (
-        <p className="mt-5 text-sm leading-7 text-slate/70">
-          Этапы заказа обновляются. Позвоните или напишите в Telegram, чтобы согласовать поездку.
-        </p>
-      )}
 
-      <div className="mt-5 flex flex-col gap-4 rounded-2xl border border-[#c7ae90] bg-[#f0ddc2] p-5 sm:flex-row sm:items-center sm:justify-between">
-        <p className="text-sm leading-7 text-slate/75">{howToOrder.cancelNote}</p>
-        <div className="flex shrink-0 gap-3">
-          <a
-            className="rounded-full bg-slate px-4 py-2.5 text-sm font-semibold text-sand transition hover:bg-[#413126] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate/30"
-            href={contacts.phoneHref}
-          >
-            Позвонить
-          </a>
-          <a
-            className="rounded-full border border-[#bea486] bg-[#f6e8d1] px-4 py-2.5 text-sm font-semibold text-slate transition hover:border-[#b3997b] hover:bg-[#ead7ba] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber/35"
-            href={contacts.telegram}
-            target="_blank"
-            rel="noreferrer"
-          >
-            Telegram
-          </a>
+        {steps.length > 0 ? (
+          <div className="mt-10 grid gap-8 md:grid-cols-3">
+            {steps.map((step) => (
+              <div key={step.num} className="bg-white p-7 text-center shadow-[0_8px_22px_rgba(15,35,54,0.06)]">
+                <p className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-[#2ea3f2] font-[Montserrat] text-3xl font-bold text-white">
+                  {step.num}
+                </p>
+                <p className="mt-5 font-[Montserrat] text-xl font-bold text-[#202020]">{step.title}</p>
+                <p className="mt-3 text-[1.02rem] leading-[1.75] text-[#555]">{step.text}</p>
+              </div>
+            ))}
+          </div>
+        ) : (
+          <p className="mt-5 text-[1.08rem] leading-[1.75] text-[#555]">
+            Этапы заказа обновляются. Позвоните или напишите в Telegram, чтобы согласовать поездку.
+          </p>
+        )}
+
+        <div className="mt-10 flex flex-col gap-5 bg-[#162f46] p-6 text-white sm:flex-row sm:items-center sm:justify-between sm:p-8">
+          <p className="max-w-3xl text-[clamp(1.05rem,2.4vw,1.22rem)] leading-[1.75] text-white/90">
+            {howToOrder.cancelNote}
+          </p>
+          <div className="flex shrink-0 flex-wrap gap-3">
+            <a
+              className="bg-[#2ea3f2] px-6 py-3 font-[Montserrat] text-lg font-bold text-white transition hover:bg-[#1d8bd4] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70"
+              href={contacts.phoneHref}
+            >
+              Позвонить
+            </a>
+            <a
+              className="border-2 border-white px-6 py-3 font-[Montserrat] text-lg font-bold text-white transition hover:bg-white hover:text-[#202020] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70"
+              href={contacts.telegram}
+              target="_blank"
+              rel="noreferrer"
+            >
+              Telegram
+            </a>
+          </div>
         </div>
       </div>
     </section>

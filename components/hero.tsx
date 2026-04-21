@@ -4,63 +4,79 @@ import { contacts, heroContent } from "@/data/site";
 
 export function Hero() {
   return (
-    <section id="hero" className="grid items-stretch gap-5 lg:grid-cols-[0.9fr_1.1fr] lg:gap-6">
-      <div className="flex h-full flex-col rounded-[24px] border border-[#705139] bg-[#493327] p-6 text-white shadow-soft sm:p-8">
-        <h1 className="max-w-2xl text-4xl font-semibold leading-tight tracking-tight text-white sm:text-5xl">{heroContent.title}</h1>
-
-        <div className="mt-6 grid gap-3 text-sm leading-6 text-white sm:text-[15px] sm:leading-7">
-          {heroContent.description.map((paragraph) => (
-            <p key={paragraph}>{paragraph}</p>
-          ))}
-        </div>
-
-        <div className="mt-6">
-          <p className="text-lg font-semibold uppercase tracking-[0.16em] text-white sm:text-xl">Предлагаемые услуги:</p>
-          <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-6 text-white sm:text-[15px] sm:leading-7">
-            {heroContent.highlights.map((item) => (
-              <li key={item}>{item}</li>
-            ))}
-          </ul>
-        </div>
-
-        <div className="mt-8 sm:mt-10">
-          <a
-            className="flex h-16 w-full max-w-full items-center justify-center whitespace-nowrap rounded-full bg-amber px-4 text-center text-[clamp(1.15rem,6vw,2.35rem)] font-semibold leading-none tracking-tight text-sand transition hover:bg-[#945327] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber/35 sm:h-20 sm:px-5"
-            href={contacts.phoneHref}
-          >
-            {contacts.phoneDisplay}
-          </a>
-        </div>
+    <section id="hero" className="dark-road relative overflow-hidden text-white">
+      <div className="absolute inset-0 opacity-15">
+        <Image
+          src={toySideImage}
+          alt=""
+          fill
+          sizes="100vw"
+          className="object-cover object-center"
+          priority
+          aria-hidden
+        />
       </div>
+      <div className="absolute inset-0 bg-[#0f2336]/90" />
 
-      <div className="flex h-full flex-col overflow-hidden rounded-[24px] border border-[#c8af91] bg-[#f7e9d3] shadow-soft">
-        <div className="relative min-h-[220px] flex-1 bg-[#f7e9d3] sm:min-h-[280px] lg:min-h-[320px]">
+      <div className="site-row-full relative grid min-h-[calc(100svh-76px)] items-center lg:grid-cols-2">
+        <div className="px-5 py-12 sm:px-10 sm:py-16 lg:px-[6vw]">
+          <h1 className="max-w-3xl font-[Montserrat] text-[clamp(2.4rem,5vw,3.125rem)] font-bold leading-[1.18] text-white">
+            {heroContent.title}
+          </h1>
+
+          <div className="mt-7 max-w-2xl space-y-4 text-[clamp(1.12rem,2.3vw,1.25rem)] font-medium leading-[1.7] text-white">
+            {heroContent.description.map((paragraph) => (
+              <p key={paragraph}>{paragraph}</p>
+            ))}
+          </div>
+
+          <div className="mt-9">
+            <p className="font-[Montserrat] text-[clamp(1.5rem,3vw,1.625rem)] font-semibold leading-tight text-white">
+              Предлагаемые услуги:
+            </p>
+            <ul className="mt-4 grid list-[circle] gap-x-8 gap-y-2 pl-6 text-[clamp(1.05rem,2.1vw,1.125rem)] font-medium leading-[2] text-white sm:grid-cols-2">
+              {heroContent.highlights.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="mt-10 flex flex-col gap-4">
+            <a
+              className="font-[Montserrat] text-[clamp(2rem,6vw,2.5rem)] font-bold leading-none text-white transition hover:text-[#2ea3f2] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70"
+              href={contacts.phoneHref}
+            >
+              {contacts.phoneDisplay}
+            </a>
+            <div className="flex flex-wrap gap-3">
+              <a
+                className="border-2 border-white px-5 py-3 font-[Montserrat] text-base font-bold text-white transition hover:bg-white hover:text-[#202020] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70"
+                href={contacts.telegram}
+                target="_blank"
+                rel="noreferrer"
+              >
+                Telegram
+              </a>
+              <a
+                className="border-2 border-white px-5 py-3 font-[Montserrat] text-base font-bold text-white transition hover:bg-white hover:text-[#202020] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70"
+                href={contacts.telegram}
+                target="_blank"
+                rel="noreferrer"
+              >
+                Max
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div className="flex min-h-[42svh] items-start self-stretch px-5 pb-10 pt-4 sm:px-10 lg:min-h-[calc(100svh-76px)] lg:px-0 lg:py-10">
           <Image
             src={toySideImage}
             alt="Автомобиль Toyota для трансфера по Крыму"
-            fill
             sizes="(max-width: 1024px) 100vw, 50vw"
-            className="object-cover object-center"
+            className="h-auto w-full object-contain"
             priority
           />
-        </div>
-        <div className="flex flex-col gap-3 p-5 sm:p-6">
-          <a
-            className="flex h-14 w-full items-center justify-center whitespace-nowrap rounded-full border border-[#d6b28c]/45 bg-[#5c4230] px-4 text-center text-[clamp(0.95rem,4.2vw,1.45rem)] font-semibold leading-none text-sand transition hover:bg-[#674a35] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/35 sm:h-[60px] sm:px-5"
-            href={contacts.telegram}
-            target="_blank"
-            rel="noreferrer"
-          >
-            Написать в Telegram
-          </a>
-          <a
-            className="flex h-14 w-full items-center justify-center whitespace-nowrap rounded-full border border-[#d6b28c]/45 bg-[#5c4230] px-4 text-center text-[clamp(0.95rem,4.2vw,1.45rem)] font-semibold leading-none text-sand transition hover:bg-[#674a35] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/35 sm:h-[60px] sm:px-5"
-            href={contacts.telegram}
-            target="_blank"
-            rel="noreferrer"
-          >
-            Написать в Max
-          </a>
         </div>
       </div>
     </section>
