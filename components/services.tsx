@@ -6,7 +6,7 @@ export function Services() {
   return (
     <section
       id="services"
-      className="old-paper section-pad relative border-y border-[#e7eef5]"
+      className="old-paper relative border-y border-[#e7eef5] py-12 sm:py-14 lg:py-16"
     >
       <div className="site-row">
         <div className="mx-auto max-w-3xl text-center">
@@ -18,7 +18,7 @@ export function Services() {
       </div>
 
       {items.length > 0 ? (
-        <div className="mx-auto mt-10 grid w-[calc(100%_-_40px)] max-w-[1280px] grid-cols-1 border-x border-t border-[#e7eef5] bg-white/70 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mx-auto mt-8 grid w-[calc(100%_-_40px)] max-w-[1280px] grid-cols-1 border-x border-t border-[#e7eef5] bg-white/70 sm:grid-cols-2 lg:grid-cols-4">
           {items.map((item) => (
             <div
               key={item}

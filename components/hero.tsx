@@ -5,45 +5,45 @@ import { contacts, heroContent } from "@/data/site";
 export function Hero() {
   return (
     <section id="hero" className="dark-road relative overflow-hidden text-white">
-      <div className="absolute inset-0 opacity-15">
+      <div className="absolute inset-0 opacity-10">
         <Image
           src={toySideImage}
           alt=""
           fill
           sizes="100vw"
-          className="object-cover object-center"
+          className="object-cover object-center blur-[1px]"
           priority
           aria-hidden
         />
       </div>
-      <div className="absolute inset-0 bg-[#0f2336]/90" />
+      <div className="absolute inset-0 bg-[#0f2336]/80" />
 
-      <div className="site-row-full relative grid min-h-[calc(100svh-76px)] items-center lg:grid-cols-2">
-        <div className="px-5 py-12 sm:px-10 sm:py-16 lg:px-[6vw]">
-          <h1 className="max-w-3xl font-[Montserrat] text-[clamp(2.4rem,5vw,3.125rem)] font-bold leading-[1.18] text-white">
+      <div className="site-row-full relative grid items-start gap-4 lg:min-h-[620px] lg:grid-cols-[0.9fr_1.1fr] lg:gap-0 xl:min-h-[660px]">
+        <div className="px-5 pb-6 pt-9 sm:px-10 sm:pb-8 sm:pt-12 lg:px-[6vw] lg:py-[5vw]">
+          <h1 className="max-w-3xl font-[Montserrat] text-[clamp(2.2rem,4.6vw,3.125rem)] font-bold leading-[1.12] text-white">
             {heroContent.title}
           </h1>
 
-          <div className="mt-7 max-w-2xl space-y-4 text-[clamp(1.12rem,2.3vw,1.25rem)] font-medium leading-[1.7] text-white">
+          <div className="mt-5 max-w-2xl space-y-3 text-[clamp(1.05rem,2vw,1.2rem)] font-medium leading-[1.65] text-white">
             {heroContent.description.map((paragraph) => (
               <p key={paragraph}>{paragraph}</p>
             ))}
           </div>
 
-          <div className="mt-9">
-            <p className="font-[Montserrat] text-[clamp(1.5rem,3vw,1.625rem)] font-semibold leading-tight text-white">
+          <div className="mt-7">
+            <p className="font-[Montserrat] text-[clamp(1.35rem,2.7vw,1.55rem)] font-semibold leading-tight text-white">
               Предлагаемые услуги:
             </p>
-            <ul className="mt-4 grid list-[circle] gap-x-8 gap-y-2 pl-6 text-[clamp(1.05rem,2.1vw,1.125rem)] font-medium leading-[2] text-white sm:grid-cols-2">
+            <ul className="mt-3 grid list-[circle] gap-x-8 gap-y-1.5 pl-6 text-[clamp(1rem,1.8vw,1.08rem)] font-medium leading-[1.8] text-white sm:grid-cols-2">
               {heroContent.highlights.map((item) => (
                 <li key={item}>{item}</li>
               ))}
             </ul>
           </div>
 
-          <div className="mt-10 flex flex-col gap-4">
+          <div className="mt-7 flex flex-col gap-4">
             <a
-              className="font-[Montserrat] text-[clamp(2rem,6vw,2.5rem)] font-bold leading-none text-white transition hover:text-[#2ea3f2] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70"
+              className="font-[Montserrat] text-[clamp(1.9rem,5.5vw,2.45rem)] font-bold leading-none text-white transition hover:text-[#2ea3f2] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70"
               href={contacts.phoneHref}
             >
               {contacts.phoneDisplay}
@@ -69,12 +69,12 @@ export function Hero() {
           </div>
         </div>
 
-        <div className="flex min-h-[42svh] items-start self-stretch px-5 pb-10 pt-4 sm:px-10 lg:min-h-[calc(100svh-76px)] lg:px-0 lg:py-10">
+        <div className="flex items-start self-stretch px-0 pb-7 pt-0 sm:px-8 lg:items-center lg:px-0 lg:pb-0 lg:pt-8">
           <Image
             src={toySideImage}
             alt="Автомобиль Toyota для трансфера по Крыму"
-            sizes="(max-width: 1024px) 100vw, 50vw"
-            className="h-auto w-full object-contain"
+            sizes="(max-width: 1024px) 100vw, 60vw"
+            className="ml-auto h-auto w-[112%] max-w-none object-contain sm:w-full lg:w-[112%] xl:w-[118%]"
             priority
           />
         </div>
